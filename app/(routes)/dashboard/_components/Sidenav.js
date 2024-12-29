@@ -6,6 +6,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 import { UploadPdfDialog } from "./UploadPdfDialog";
+import Link from "next/link";
 
 const Sidenav = () => {
   const [loading, setLoading] = useState(false);
@@ -13,7 +14,10 @@ const Sidenav = () => {
   return (
     <div className="shadow-md h-screen p-7">
       <div className="flex item-center">
+        <Link href={'/'}> 
         <Image src="/logo.svg" width={170} height={120} alt="logo" />
+        </Link>
+       
       </div>
       <div className="mt-10">
         <UploadPdfDialog>
@@ -22,13 +26,13 @@ const Sidenav = () => {
           </Button>
         </UploadPdfDialog>
 
-        <div className="flex items-center gap-2 p-3 mt-5 hover:bg-slate-100 rounded-lg cursor-pointer">
+        <div className="flex items-center gap-2 p-3 mt-5 hover:bg-slate-200 rounded-lg cursor-pointer">
           <Layout />
-          <h2>Workspace</h2>
+          <Link href={'/dashboard'}>Workspace</Link>
         </div>
-        <div className="flex items-center gap-2 p-3 mt-1 hover:bg-slate-100 rounded-lg cursor-pointer">
+        <div className="flex items-center gap-2 p-3 mt-1 hover:bg-slate-200 rounded-lg cursor-pointer">
           <Shield />
-          <h2>Upgrade</h2>
+          <Link href={'/dashboard/upgrade'}>Upgrade</Link>
         </div>
       </div>
 

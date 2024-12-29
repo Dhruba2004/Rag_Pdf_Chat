@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={outfit.className}>
           <ConvexClientProvider>
-            <Header/>
             {children}
             </ConvexClientProvider>
             <Toaster richColors/>
