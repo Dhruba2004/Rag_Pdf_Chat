@@ -1,4 +1,4 @@
-# Scrub
+# Scribe
 
 Scribe is a full-stack AI-powered note-taking SaaS application that enables users to interact with PDF documents through chat. Leveraging Retrieval-Augmented Generation (RAG) techniques, it provides advanced AI capabilities for efficient information retrieval and management.
 
